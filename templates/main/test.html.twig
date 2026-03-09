@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>Test !</h1>
+
+    {# Création de variables #}
+    {% set name = 'Michel' %}
+<h2>Hello {{ name }} !!!</h2>
+
+{# Création d'un tableau #}
+{% set colors = ['red', 'yellow', 'purple', 'cornflowerblue'] %}
+{% for color in colors %}
+    {% if loop.first %}
+    <p>Première couleur</p>
+        {% elseif loop.last %}
+        <p>Dernière couleur</p>
+{% endif %}
+
+<div style="background-color: {{ color }}">{{ color }}</div>
+    <div>Nombres d'élements : {{ loop.index }} / {{ loop.length }}</div>
+    <div>index de l'éléments a partir de 0 :  {{ loop.index0 }}</div>
+{% endfor %}
+
+{# Utilisation d'objet #}
+
+{% set user = {name: 'michel', age: 98} %}
+<p>{{ user.name }}</p>
+<p>{{ user.age }}</p>
+
+{# filtres #}
+<h2>Quelques filtres</h2>
+<div>{{ name | upper}}, taille du nom : {{ name | length }}</div>
+<div>Taille du tableau :{{ colors | length }} couleurs</div>
+<div>Date du jour : {{ 'now'| date('d/m/y') }}</div>
+
+{% endblock %}
