@@ -32,4 +32,14 @@
 <div>Taille du tableau :{{ colors | length }} couleurs</div>
 <div>Date du jour : {{ 'now'| date('d/m/y') }}</div>
 
+    <h3>Série !</h3>
+    <div>{{ mySerie.name }}</div>
+    <div>{{ mySerie.author }}</div>
+    <div>Nombre d'épisodes : {{ mySerie.nbEpisode }}</div>
+    <div>Date du serveur : {{ date | date('d/m/Y H:i') }}</div>
+
+    <div>{{ username }}</div>
+    <div>{{ username | raw }}</div>
+    <div>{{ username | striptags }}</div>
+
 {% endblock %}
