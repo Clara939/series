@@ -76,4 +76,6 @@ button{
 }
 .form-errors{
     color: red;
+}.form-errors li{
+    list-style: none;
 }
