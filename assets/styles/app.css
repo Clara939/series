@@ -80,3 +80,14 @@ button{
 .form-errors li{
     list-style: none;
 }
+.seasons article{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.seasons article img{
+    max-height: 200px;
+    margin-right: 5px;
+}
+.seasons{
+    margin-top: 20px;
+}
