@@ -8,8 +8,9 @@
     </div>
     <div class="serie-details-infos">
         <h2>{{ serie.name }}</h2>
-        <a class="update-button" href="{{ path('series_update', {'id': serie.id}) }}">Update</a>
-        <a onclick="return confirm('Supression de {{ serie.id }} ?')" class="delete-button" href="{{ path('series_delete', {'id': serie.id}) }}">Delete</a>
+        <a class="link-button" href="{{ path('series_update', {'id': serie.id}) }}">Update</a>
+        <a onclick="return confirm('Supression de {{ serie.id }} ?')" class="link-button" href="{{ path('series_delete', {'id': serie.id}) }}">Delete</a>
+        <a class="link-button" href="{{ path('season_add_by_serie', {'id': serie.id}) }}">Add a season</a>
         <div>User Ratings {{ serie.vote }}</div>
         <div>Categorized in {{ serie.genres }}</div>
         <div>Status {{ serie.status }}</div>
